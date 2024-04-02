@@ -51,11 +51,13 @@ Then, make sure you have the neccessary R packages installed. These are:
 - `vaccineAdjust`: Not on CRAN. To install: `devtools::install_github("covidestim/vaccineAdjust")`
 - `raster`
 - `spdep`
+- `usdata`
 
-You can install them in the R console: `install.packages(c('tidyverse', 'cli', 'docopt', 'sf', 'raster', 'spdep'))`.
+You can install them in the R console: `install.packages(c('tidyverse', 'cli', 'docopt', 'sf', 'raster', 'spdep', 'usdata'))`.
 
-Finally, attempt to Make the most important targets. Note, you will need GNU Make >=4.3
-installed, which does not ship with OS X.
+Finally, attempt to make the most important targets. Note, you will need GNU Make >=4.3
+installed, which does not ship with OS X. 
+Be aware that MacOS system can come without wget installed, so make sure to have installed you can do it by typing on terminal: `brew install wget`.
 We identify a few different endpoints for both the county and the state geographies. In the following we describe the targets for the counties.
 The first target is daily and weekly data suitable for the covidestim website runs. This data relies on limited sources and has date constraints.
 The second set of targets is daily and weekly data suitable for manuscripts and additional analyses, and is as complete as possible, extending the time series as long as available. This includes multiple data sources and imputes data for missing counties in Nebraska for example.
